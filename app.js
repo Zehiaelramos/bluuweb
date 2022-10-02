@@ -4,6 +4,9 @@ const app = express()
 const morgan = require('morgan');
 app.use(morgan('tiny'));
 
+const cors = require('cors');
+app.use(cors());
+
 app.get('/', function (req, resp) {
 	resp.send('Hello World')
 })
