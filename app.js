@@ -7,6 +7,8 @@ app.use(morgan('tiny'));
 const cors = require('cors');
 app.use(cors());
 
+app.use(express.json());
+
 app.get('/', function (req, resp) {
 	resp.send('Hello World')
 })
