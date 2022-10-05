@@ -6,11 +6,13 @@ import path from 'path'
 
 const app = express()
 
+// Middleware
 app.use(morgan('tiny'))
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true })) // application/x-www-form-urlencoded
 
+// Routes
 app.get('/', (req, resp) => {
   resp.send('Hello World!')
 });
