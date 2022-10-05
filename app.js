@@ -12,6 +12,11 @@ app.use(express.json());
 //application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
 
+// Para acceder al directorio actual
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', function (req, resp) {
 	resp.send('Hello World')
 })
