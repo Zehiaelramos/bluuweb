@@ -1,8 +1,8 @@
 
-const express = require('express')
-const morgan = require('morgan')
-const cors = require('cors')
-const path = require('path') // Para acceder al directorio actual
+import express from 'express'
+import morgan from 'morgan'
+import cors from 'cors'
+import path from 'path'
 
 const app = express()
 
